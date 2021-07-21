@@ -1,7 +1,7 @@
 /* 
 Mixed messages produces a message with random content from three arrays.
 The message has the following structure:
-`Did you know that [A person or animal] has [some achievement or possession] [timespan]?`*/
+`Did you know that [A subject] [some achievement or possession] [timespan]?`*/
 
 let subject = ['Trump', 'your mother', 'my guinea pig', 'your grandpa', 'your car', 'the Pope', 'his sister', 'the rabbit']
 let posessionOrAchievement =  ['has petted the most guinea pigs', 'has held the best speech', 'drifted the longest distance', 'won the most races']
@@ -17,7 +17,7 @@ const getRandomItem = (arr) => {
 const generateMixedMessage = (arr) => {
     let [subject, posession, timespan] = arr.map(el => getRandomItem(el))
 
-    console.log(`${subject} ${posession} ${timespan}`);
+    console.log(`Did you know that ${subject} ${posession} ${timespan}`);
 }
 
 generateMixedMessage(components)
