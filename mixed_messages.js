@@ -16,8 +16,8 @@ const getRandomItem = (arr) => {
 
 const generateMixedMessage = (arr) => {
     let [subject, posession, timespan] = arr.map(el => getRandomItem(el))
-
-    console.log(`Did you know that ${subject} ${posession} ${timespan}`);
+    
+    console.log(`Did you know that`, [subject, posession, timespan].join(" "));
 }
 
 generateMixedMessage(components)
