@@ -7,7 +7,17 @@ let subject = ['Trump', 'your mother', 'my guinea pig', 'your grandpa', 'your ca
 let posessionOrAchievement =  ['has the largest balls', 'has petted the most guinea pigs', 'has held the best speech', 'drifted the longest distance', 'won the most races']
 let timespan = ['in human history', 'of all times', 'today', 'presently']
 
+let components = [subject, posessionOrAchievement, timespan]
+
 const generateArrayNumber = (arr) => {
     return Math.floor(Math.random() * arr.length);
 }
 
+const generateMixedMessage = (arr) => {
+    const indexArray = arr.map(el => generateArrayNumber(el))
+    let [sI, pI, tI]  = indexArray
+
+    console.log(`${subject[sI]} ${posessionOrAchievement[pI]} ${timespan[tI]}`);
+}
+
+generateMixedMessage(components)
